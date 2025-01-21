@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Body Type Calculator</title>
+  <style>
+    /* Body background gradient */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff8a5c, #d56fff);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    /* Calculator container */
+    .calculator-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 350px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .calculator-container:hover {
+      transform: scale(1.03);
+    }
+
+    /* Title */
+    h2 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    /* Label styling */
+    label {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 10px 0 5px;
+      display: block;
+      font-weight: 600;
+    }
+
+    /* Input styling */
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #333;
+      transition: border 0.3s ease;
+    }
+
+    input[type="number"]:focus {
+      outline: none;
+      border: 1px solid #6c63ff;
+    }
+
+    /* Button styling */
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #6c63ff;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #4b47cc;
+    }
+
+    /* Result and image container styling */
+    .result {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+      margin-top: 15px;
+    }
+
+    /* Body type image styling */
+    .body-type-image {
+      max-width: 80%;
+      height: auto;
+      display: none;
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s ease;
+    }
+
+    .body-type-image.visible {
+      display: block;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="calculator-container">
+  <h2>Body Type Calculator</h2>
+
+  <label for="bust">Bust Size (cm):</label>
+  <input type="number" id="bust" placeholder="Enter your bust size" required>
+
+  <label for="waist">Waist Size (cm):</label>
+  <input type="number" id="waist" placeholder="Enter your waist size" required>
+
+  <label for="hip">Hip Size (cm):</label>
+  <input type="number" id="hip" placeholder="Enter your hip size" required>
+
+  <label for="highHip">High Hip Size (cm):</label>
+  <input type="number" id="highHip" placeholder="Enter your high hip size" required>
+
+  <button onclick="calculateBodyType()">Calculate Body Type</button>
+
+  <div class="result" id="result"></div>
+
+  <!-- Images for body types -->
+  <img id="triangle" class="body-type-image" src=https://www.realmenrealstyle.com/wp-content/uploads/2023/04/dress-for-body-type.jpg alt="Triangle Body Type">
+  <img id="rectangle" class="body-type-image" src=https://www.realmenrealstyle.com/wp-content/uploads/2023/04/dress-for-body-type.jpg alt="Rectangle Body Type">
+  <img id="hourglass" class="body-type-image" src=https://www.realmenrealstyle.com/wp-content/uploads/2023/04/dress-for-body-type.jpg alt="Hourglass Body Type">
+  <img id="invertedTriangle" class="body-type-image" src=https://www.realmenrealstyle.com/wp-content/uploads/2023/04/dress-for-body-type.jpg alt="Inverted Triangle Body Type">
+</div>
+
+<script>
+  function calculateBodyType() {
+    const bust = parseFloat(document.getElementById("bust").value);
+    const waist = parseFloat(document.getElementById("waist").value);
+    const hip = parseFloat(document.getElementById("hip").value);
+    const highHip = parseFloat(document.getElementById("highHip").value);
+
+    // Hide all images initially
+    document.querySelectorAll('.body-type-image').forEach(img => img.classList.remove('visible'));
+
+    if (isNaN(bust) || isNaN(waist) || isNaN(hip) || isNaN(highHip) || bust <= 0 || waist <= 0 || hip <= 0 || highHip <= 0) {
+      document.getElementById("result").textContent = "Please enter valid measurements.";
+      return;
+    }
+
+    let bodyType;
+
+    if (waist > bust && waist > hip) {
+      bodyType = "Triangle";
+      document.getElementById("triangle").classList.add('visible');
+    } else if (bust === hip && waist < bust) {
+      bodyType = "Rectangle";
+      document.getElementById("rectangle").classList.add('visible');
+    } else if (hip > bust && waist < bust) {
+      bodyType = "Hourglass";
+      document.getElementById("hourglass").classList.add('visible');
+    } else if (bust > hip && bust > waist) {
+      bodyType = "Inverted Triangle";
+      document.getElementById("invertedTriangle").classList.add('visible');
+    } else {
+      bodyType = "Undefined";
+    }
+
+    document.getElementById("result").textContent = `Body Type: ${bodyType}`;
+  }
+</script>
+
+</body>
+</html>

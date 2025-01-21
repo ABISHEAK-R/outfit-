@@ -1,0 +1,140 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.header-icons input[type="text"] {
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    margin-right: 15px;
+}
+
+.header-icons a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Hero Section */
+.hero {
+    background: #444 url('https://png.pngtree.com/thumb_back/fh260/background/20230425/pngtree-fashion-store-interior-of-a-men-s-clothing-store-image_2519173.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-text button {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Featured Collections */
+.featured-collections {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.featured-collections h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.collection-item {
+    text-align: center;
+}
+
+.collection-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.collection-item h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-links a,
+.social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.newsletter input[type="email"] {
+    padding: 8px;
+    border-radius: 3px;
+    border: none;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ff6b6b;
+    color: white;
+    cursor: pointer;
+}

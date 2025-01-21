@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Outfit Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styling for the sections */
+        .new-arrivals, .featured-collections {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .new-arrivals h2, .featured-collections h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .collection-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .about-us {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fafafa;
+        }
+
+        .about-us h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            font-size: 1em;
+            margin-bottom: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">Men's Outfit Store</div>
+            <nav class="navbar">
+                <a href="#new-arrivals">New Arrivals</a>
+                <a href="#collections">Collections</a>
+                <a href="#about-us">About Us</a> <!-- Updated link -->
+                <a href="bmi.html">Body Type Calculator</a>
+            </nav>
+            <div class="header-icons">
+                <input type="text" placeholder="Search...">
+                <a href="#">Account</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Explore the Best in Men's Fashion</h1>
+            <p>From casual wear to formal suits, find your style here.</p>
+            <button>Shop Now</button>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="new-arrivals" id="new-arrivals">
+        <h2>New Arrivals</h2>
+        <div class="collection-grid">
+            <div class="collection-item">
+                <img src=https://images.unsplash.com/photo-1692220438331-01d572e4d26c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNhc3VhbCUyMG1hbnxlbnwwfHwwfHx8MA%3D%3D alt="New Casual Wear">
+                <h3>New Casual Wear</h3>
+            </div>
+            <div class="collection-item">
+                <img src=https://louisphilippe.abfrl.in/blog/wp-content/uploads/2024/02/Formal-Dress-Code-in-2024.jpg alt="New Formal Attire">
+                <h3>New Formal Attire</h3>
+            </div>
+            <div class="collection-item">
+                <img src=https://img.freepik.com/premium-psd/sport-man-standing_1296534-29790.jpg?semt=ais_hybrid alt="New Sportswear">
+                <h3>New Sportswear</h3>
+            </div>
+            <div class="collection-item">
+                <img src=https://mensflair.com/wp-content/uploads/2022/11/WinterFashionGuideMain.jpg alt="New Winter Collection">
+                <h3>New Winter Collection</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections Section -->
+    <section class="featured-collections" id="collections">
+        <h2>Featured Men's Collections</h2>
+        <div class="collection-grid">
+            <div class="collection-item">
+                <img src=https://img.freepik.com/free-photo/front-view-man-usa-flea-market_23-2149536947.jpg alt="Casual Wear">
+                <h3>Casual Wear</h3>
+            </div>
+            <div class="collection-item">
+                <img src=https://cdn.shopify.com/s/files/1/0162/2116/files/Untitled_design_32.jpg?v=1530025943 alt="Formal Attire">
+                <h3>Formal Attire</h3>
+            </div>
+            <div class="collection-item">
+                <img src=https://images.pexels.com/photos/1103832/pexels-photo-1103832.jpeg?cs=srgb&dl=pexels-ollivves-1103832.jpg&fm=jpg alt="Sportswear">
+                <h3>Sportswear</h3>
+            </div>
+            <div class="collection-item">
+                <img src=https://media.istockphoto.com/id/1288189469/photo/one-handosme-man-dressed-in-warm-winter-clothing-walking-outdoors-in-the-city.jpg?s=612x612&w=0&k=20&c=HcKQwj_B2VMG8zDTxUuy3vlhYzM5WmsbqS2SkZpkVkk= alt="Winter Collection">
+                <h3>Winter Collection</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us" id="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to Men's Outfit Store! We are dedicated to providing you with the latest trends in men's fashion. Our collection ranges from casual wear to formal attire, ensuring that you find the perfect outfit for any occasion.</p>
+        <p>At Men's Outfit Store, we believe in quality, style, and comfort. Our team is passionate about fashion and works hard to curate the best selections for our customers. Thank you for choosing us to enhance your wardrobe!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#support">Customer Support</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="social-media">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+            </div>
+            <div class="newsletter">
+                <p>Sign up for updates</p>
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </footer>
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "2198a414-4682-46d8-8d3e-f2e78950d459", // The ID from your chatbot link
+            region: "au-syd", // The region specified in your chatbot link
+            serviceInstanceID: "e1d6d1e9-ff5a-434c-91be-a319ef2829c5", // The service instance ID from your chatbot link
+            onLoad: function(instance) { 
+                instance.render();
+            }
+        };
+      
+        setTimeout(function() {
+          const t = document.createElement('script');
+          t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+          document.head.appendChild(t);
+        });
+      </script>
+      
+      <style>
+        /* Optional: Additional CSS to position the chatbot widget */
+        .WACLauncher {
+            position: fixed !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            z-index: 1000;
+        }
+      </style>
+      
+</body>
+</html>
